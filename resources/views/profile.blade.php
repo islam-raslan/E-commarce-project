@@ -20,14 +20,11 @@
               <div class="px-4 pt-0 pb-4 cover">
                 <div class="media align-items-end profile-head">
                     <div class="profile mr-3">
-                      <img class="profile-pic rounded mb-2 img-thumbnail" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." >
-                     <div class="p-image media-body mb-5 text-white">
-                        <i class="upload-button"><img src="https://img.icons8.com/android/35/000000/camera.png"/></i>
-                        <input class="file-upload" type="file" accept="image/*"/>
-                    </div>
+                      <img class="profile-pic rounded mb-2 img-thumbnail" src="https://thumbs.dreamstime.com/b/customer-customer-icon-146530250.jpg" alt="..." >
+                     
                   </div>
                     <div class="media-body mb-5 ">
-                      <h4 class="mt-0 mb-5 ml-5 h4 par text-white" >Mark Williams</h4>
+                      <h4 class="mt-0 mb-5 ml-5 h4 par text-white " >{{$customer->name}}</h4>
                   </div>   
                    
                 </div>
@@ -53,55 +50,36 @@
                 </div> 
                 <!-- profile info -->
                 <div class="px-4 py-3">
-                  
-                  <div class="row name">
-                    <div class="col-sm-1">
-                      <h6 class="mb-0">Full Name</h6> 
-                    </div>
-                    <div class="col input1 ">
-                        <p>Mark Williams</p>
-                  </div>
-                  </div>
-                  <div class="col-md-3 mt-3 mr-3"> 
-                    <a href="#" class="btn edit btn-sm  btn-success">Edit Name</a>
-                  <a href="#" class="btn save btn-sm  btn-success">Save</a>
-              </div> 
-                    <h5 class="mt-5">About</h5>
-                    <div class="p-1 rounded shadow-sm bg-light">
-                     
-                       
-                          <div class="row">
-                            <div class="col-sm-1">
-                              <h6 class="mb-0">Location</h6> 
-                            </div>
-                            <div class="col input">
-                                <p>tulkarm</p>
-                          </div>
-                          </div>  
-                          <div class="row">
-                            <div class="col-sm-1">
-                              <h6 class="mb-0">Email</h6> 
-                            </div>
-                            <div class="col input">
-                                <p>Mark Williams@gmail.com</p>
-                          </div>
-                          </div>    
-                          <div class="row">
-                            <div class="col-sm-1">
-                              <h6 class="mb-0">Password</h6> 
-                            </div>
-                            <div class="col input">
-                                <p>Mark Williams@gmail.com</p>
-                          </div>
-                          </div>                  
-                    </div>
-                    <div class="col-md-3 mt-1 mr-3"> 
-                      <a href="#" class="btn edit2  btn-sm  btn-success">Edit profile</a>
-                    <a href="#" class="btn save2  btn-sm btn-success">Save</a>
-                </div> 
-                </div>
-              </div>
+                <form action="{{url('/profile/'.$customer->id)}}" method="POST">
+                     @csrf
+                 <div class="form-group ">
 
+                     
+                    <div class=" row">
+                    <label for="colFormLabel" class="col-sm-2 col-form-label ">Name</label> <p class="input1 name">{{$customer->name}}</p>
+                    </div>
+                 
+             
+
+                    <div class="row">
+                        <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label> <p class="input1">{{$customer->email}}</p>
+                     </div>   
+
+                      </div>
+                 
+                            <div class=" row">
+                            <label for="colFormLabel" class="col-sm-2 col-form-label ">password</label>  <p class="input1">{{$customer->password}}</p> 
+                          </div>
+                   
+
+                      <div class="col-md"> 
+                         <a  id="editname" class="btn edit btn-sm  btn-success">Edit Name</a>
+                         <button type="submit"  class="btn save btn-sm  btn-success">Save</button>
+                      </div> 
+                    </form>
+
+
+                 
             </div>
   
     

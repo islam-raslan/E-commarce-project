@@ -18,19 +18,11 @@
 <title>Document</title>
 </head>
 <body class="d-flex justify-content-end ">
-    
-    
-
-<div class="form mr-5 ">
-<h1>hi boyes</h1>
-	
-  </div>
-  
-	
+    <h1>asdioasd</h1>   
 
 
 	
 
 
 </body>
-</html>
+</html> 

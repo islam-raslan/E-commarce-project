@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Customercontroler;
 use App\Http\Controllers\admin;
+use App\Http\Controllers\profileController;
 use App\Http\Controllers\adminDBcontroller;
 
 /*
@@ -52,7 +53,16 @@ Route::post('adminDashbord',[adminDBcontroller::class,'addData']);
     
     
     
-    
+    //profile rout
+    // Route::view('profile','profile');
+    // Route::post('profile',[profileController::class,'update']);
+    Route::post('/profile/{id}',[profileController::class,'newupdate']);
+    Route::get('/profile/{id}',[profileController::class,'show']);
+
+
+
+
+
     
     
     
