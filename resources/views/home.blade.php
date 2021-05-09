@@ -18,7 +18,10 @@
 <title>Document</title>
 </head>
 <body class="d-flex justify-content-end ">
-    <h1>asdioasd</h1>   
+<!-- {{var_dump(session('email'))}} -->
+
+<h1>hi heloo</h1>
+ 
 
 
 	

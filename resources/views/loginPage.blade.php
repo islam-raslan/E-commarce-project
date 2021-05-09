@@ -45,10 +45,7 @@
 			<input id="password" type="password" name="password" required="required"/>
 		</div>
 
-		<!-- <div class="form-group">
-			<label for="cpassword">Confirm Password</label>
-			<input id="cpassword" type="password" name="cpassword" required="required"/>
-		</div> -->
+	
 		
 		<div class="form-group">
 			<label for="addres">Address</label>

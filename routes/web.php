@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Customercontroler;
 use App\Http\Controllers\admin;
 use App\Http\Controllers\profileController;
+use App\Http\Controllers\detailscontroller;
 use App\Http\Controllers\adminDBcontroller;
+use App\Http\Controllers\commentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -43,37 +46,20 @@ Route::get('adminDashbord',[adminDBcontroller::class,'show']);
 Route::post('adminDashbord',[adminDBcontroller::class,'addData']);
 
 
-      //Route::put('adminDashbord/update',[adminDBcontroller::class,'update']);
-        // Route::get('/test', function () {
-    //     return view('test', ['name' => "hi"]);
-    // });
 
-    //Route::put('test',[adminController::class,'update']);
-    //Route::get('admin',[sliderController::class,'showslider']);
-    
-    
-    
-    //profile rout
-    // Route::view('profile','profile');
-    // Route::post('profile',[profileController::class,'update']);
-    Route::post('/profile/{id}',[profileController::class,'newupdate']);
-    Route::get('/profile/{id}',[profileController::class,'show']);
+//profile rout
+Route::post('/profile/{id}',[profileController::class,'newupdate']);
+Route::get('/profile/{id}',[profileController::class,'show']);
 
+
+
+//details route 
+Route::view('details','details');
+//Route::get('/details',[detailscontroller::class,'show']);
+Route::get('/details/{id}',[detailscontroller::class,'detail']);
+Route::post('/details/{id}',[detailscontroller::class,'addToCartOrComment']);
 
 
 
 
     
-    
-    
-    
-    //login route
-//     //Route::post("user",[UserAuth::class,'userLogin']);
-//     Route::view("/loginPage",'loginPage');
-//     Route::view("/islam",'islam');
-
-
-
-//     //sginup route
-//     Route::post('/loginPage',[customercontroler::class,'AddCustomer']);
-// //    Route::post('/loginPage','customercontroler@AddCustomer');

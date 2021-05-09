@@ -32,15 +32,15 @@ class Customercontroler extends Controller{
         $password = $data['password'];//var password store email from client
 
         // get data from db if email and password from client is already exist in db, if exiest will containe one object unless or empty if not
-        $query = DB::select("select email, password from customers where email='{$email}' and password='{$password}'"); 
+        $user = customer::where('email', $email)->where('password', $password)->first();
 
         //check if query length is bigger than 0 login is success, else login error
-        if(count($query) != 0){
-            $req->session()->put('email', $data['email']);
+        if($user) {
+            $req->session()->put('user', $user);
             return redirect('home');
         }
         else {
-            return redirect('customer_login');
+            return back();
         }
     }
 

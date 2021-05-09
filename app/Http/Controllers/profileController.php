@@ -21,22 +21,7 @@ class profileController extends Controller
        
     }
 
-    /////////////
-//     function editData($id)
-// {
-//     $data= customer::find($id);
-//     return view('profile',['data'=>$data]);
-// }
-//    function update(Request $req)
-//    {
-//       $data = customer::find($req->id);
-//        $data->name = $req->name;
-//        $data->email = $req->email;
-//        $data->password = $req->password;
-    
-//        $data->save();
-//        return redirect('profile');
-//    }
+/////////////////////////////
    
     function newupdate(Request $req , $id)
     {
@@ -51,6 +36,6 @@ class profileController extends Controller
         return redirect()->back();
     }
 
-//////////////////////////////////////
+
     
 }
